@@ -162,8 +162,6 @@ def gnuplot_png(p_userid, user_name)
   # [0]:gnuplot用年月, [1]:体温, [2]:gp用カラム分け番号
   plot_column[2] = gp_column_seisei(plot_column[0], seiri_days)
 
-  # x軸、Y軸の幅を決める。Y軸（体温）は最高・最低体温±0.1度とした
-
   Gnuplot.open do |gp|
     Gnuplot::Plot.new(gp) do |plot|
       plot.xlabel "日付"
