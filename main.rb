@@ -5,6 +5,8 @@ require 'csv'
 require 'gnuplot'
 require 'twitter'
 
+# @taion_recのソースコード
+
 # 最大の体温プロット数
 $Max_Point_Const = 100
 
