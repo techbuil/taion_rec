@@ -77,6 +77,7 @@ def gnuplot_png(p_userid, user_name)
 
   # arr_inputの要素数がnを超えていたら、後方のn個のみの配列arr_kekkaを返す
   # 要素数がn以下の場合、何もしないでarr_inputを返す
+  # array.shiftを使ったほうがよい気がする
   def takadaka(n, arr_input)
     if arr_input.length > n
       arr_kekka = []
