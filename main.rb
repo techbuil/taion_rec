@@ -75,19 +75,14 @@ def gnuplot_png(p_userid, user_name)
     taion << row[1]
   end
 
-  # arr_inputの要素数がnを超えていたら、後方のn個のみの配列arr_kekkaを返す
-  # 要素数がn以下の場合、何もしないでarr_inputを返す
-  # array.shiftを使ったほうがよい気がする
+  # arr_inputの要素数がnを超えていたら（nを含まない）、後方のn個のみの配列arr_kekkaを返す
+  # 要素数がn以下(nを含む)の場合、何もしないでarr_inputを返す
   def takadaka(n, arr_input)
     if arr_input.length > n
-      arr_kekka = []
-      sabun = arr_input.length - n
-      (0..n-1).each do |i|
-        arr_kekka << [i+sabun]
-      end
-    return arr_kekka
+      return arr_input.shift(arr_input.length - n)    
+    else
+      return arr_input
     end
-    return arr_input
   end
 
   # plot数を直近の高々max_pointに押さえこむ
