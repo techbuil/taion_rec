@@ -122,6 +122,8 @@ def gnuplot_png(p_userid, user_name)
         h.to_s.gsub!(/\,\d\d\.\d\d/, "")
         if not (h == nil)
           hiduke_result << Time.strptime(h.to_s, "%Y-%m-%d;%H:%M:%S")
+        else
+          hiduke_result << nil
         end
       end
       return hiduke_result
