@@ -79,7 +79,8 @@ def gnuplot_png(p_userid, user_name)
   # 要素数がn以下(nを含む)の場合、何もしないでarr_inputを返す
   def takadaka(n, arr_input)
     if arr_input.length > n
-      return arr_input.shift(arr_input.length - n)    
+      kekka =  arr_input.last(n)
+      return kekka
     else
       return arr_input
     end
