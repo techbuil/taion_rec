@@ -1,3 +1,8 @@
+# Twitter@taion_rec のソースコード
+# https://twitter.com/taion_rec
+# https://github.com/techbuil/taion_rec
+# Ver 1.1.1
+
 require 'oauth'
 require 'json'
 require "time"
