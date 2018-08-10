@@ -390,7 +390,7 @@ result.each do |tweet|
 
   # 取得したつぶやき（自分へのレス）のうちIDの最大数を取得する。
   # もっとも、現在の仕様では取得したJSONの一番初めのものが最大のIDとなるようだが、誤動作防止のため一応確認させている
-  if tw_id_int > last_id_kouho then
+  if tw_id_int.to_i > last_id_kouho.to_i then
     last_id_kouho = tw_id_int
   end
 
