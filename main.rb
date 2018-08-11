@@ -106,7 +106,7 @@ def gp_column_seisei(hiduke_column, bunkatu)
 
   # 分割指示がnilのときは、hiduke_ruby分の0が入った配列を返す（生理がないときは全て0列目のグラフの意）
   if bunkatu_ruby[0] == nil then
-    (0..hiduke.length).each do |i|
+    (0..hiduke_ruby.length).each do |i|
       column_kekka[i] = 1
     end
   else
